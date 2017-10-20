@@ -12,7 +12,8 @@
     "build": "NODE_ENV=production rollup -c",
     "dev": "rollup -c -w",
     "test": "npm run lint && npm run typecheck && jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "prepare": "npm run build"
   },
   "author": "Gen Ichino",
   "license": "MIT",
