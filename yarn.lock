@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-"@gen/prng@^0.0.1":
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/@gen/prng/-/prng-0.0.1.tgz#9cb738463447cefd688d4cb0554875df25c5827d"
+"@gen/prng@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@gen/prng/-/prng-0.0.2.tgz#ceea1fef183bff4fabb2ef211edb0a3c0363da89"
 
 abab@^1.0.3:
   version "1.0.4"

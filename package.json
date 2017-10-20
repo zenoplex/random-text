@@ -49,6 +49,6 @@
   "homepage": "https://github.com/zenoplex/random-text",
   "repository": "zenoplex/random-text",
   "dependencies": {
-    "@gen/prng": "^0.0.1"
+    "@gen/prng": "^0.0.2"
   }
 }
