@@ -46,7 +46,8 @@
     "node": "^8.7.0",
     "yarn": "^1.1.0"
   },
-  "repository": "",
+  "homepage": "https://github.com/zenoplex/random-text",
+  "repository": "zenoplex/random-text",
   "dependencies": {
     "@gen/prng": "^0.0.1"
   }
