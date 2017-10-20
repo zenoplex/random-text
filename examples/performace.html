@@ -1,0 +1,50 @@
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js"></script>
+  <script src="../dist/random-text.umd.js"></script>
+</head>
+<body>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  
+  <script>
+    const r = [...document.querySelectorAll('.text')].map(node => {
+      const randomText = new RandomText({
+        str: node.textContent,
+        onProgress: str => { node.innerHTML = str; },
+        onComplete: str => { setTimeout(randomText.start, 2000) }
+      });
+      randomText.start();
+    });
+  </script>
+</body>
+</html>

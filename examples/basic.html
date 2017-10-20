@@ -1,0 +1,49 @@
+<html>
+<head>
+  <style>
+    .controls {
+      margin-top: 20px;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.6.5/dat.gui.min.js"></script>
+  <script src="../dist/random-text.umd.js"></script>
+</head>
+
+<body>
+  <div id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, odit.</div>
+  <div class="controls">
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+  </div>
+  <script>
+    const text = document.querySelector('#text');
+    const start = document.querySelector('#start');
+    const stop = document.querySelector('#stop');
+
+    const randomText = new RandomText({
+      str: text.textContent,
+      onProgress: str => { text.innerHTML = str; },
+      onComplete: str => { console.log('complete'); setTimeout(randomText.start, 2000) }
+    });
+
+    start.addEventListener('click', () => {
+      randomText.start();
+    })
+
+    stop.addEventListener('click', () => {
+      randomText.stop();
+    });
+
+    randomText.start();
+
+    const gui = new dat.GUI();
+    gui.add(randomText, 'str');
+    gui.add(randomText, 'speed', 1, 10).step(1);
+    gui.add(randomText, 'frameOffset', 0, 100).step(1);
+    gui.add(randomText, 'charOffset', 0, 100).step(1);
+    gui.add(randomText, 'charStep', 0, 100).step(1);
+    gui.add(randomText, 'minCharCode', 0, 65535).step(1);
+    gui.add(randomText, 'maxCharCode', 0, 65535).step(1);
+  </script>
+</body>
+</html>
