@@ -44,8 +44,7 @@
     "dist"
   ],
   "engines": {
-    "node": "^8.7.0",
-    "yarn": "^1.1.0"
+    "node": "^8.7.0"
   },
   "homepage": "https://github.com/zenoplex/random-text",
   "repository": "zenoplex/random-text",
